@@ -20,6 +20,7 @@ namespace _2___Aula_02
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Usuario> listaUsu = new List<Usuario>();
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +33,16 @@ namespace _2___Aula_02
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            Usuario x = new Usuario();
+            x.Nome = tb_nome.Text;
+            x.DataNasc = datepicker.SelectedDate.Value;
+            x.Cpf = tb_cpf.Text;
+            x.Telefone = tb_telefone.Text;
+            x.Genero = cb_genero.Text;
+            x.Email = tb_email.Text;
+            x.Senha = tb_senha.Text;
+
+            listaUsu.Add(x);
         }
     }
 }
